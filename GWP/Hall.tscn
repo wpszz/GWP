@@ -1,0 +1,318 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Hall.gd" type="Script" id=1]
+[ext_resource path="res://controls/Camp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/NotoSansUI_Bold.tres" type="DynamicFont" id=3]
+
+[node name="Hall" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConnectHall" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.5
+margin_top = -83.5
+margin_right = 152.5
+margin_bottom = 83.5
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ConnectHall"]
+margin_left = 14.0
+margin_top = 11.0
+margin_right = 56.0
+margin_bottom = 25.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Name:"
+
+[node name="Name" type="LineEdit" parent="ConnectHall"]
+margin_left = 16.0
+margin_top = 30.0
+margin_right = 172.0
+margin_bottom = 54.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "player name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostLabel" type="Label" parent="ConnectHall"]
+margin_left = 15.0
+margin_top = 66.0
+margin_right = 57.0
+margin_bottom = 80.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "IP:"
+
+[node name="Host" type="LineEdit" parent="ConnectHall"]
+margin_left = 16.0
+margin_top = 85.0
+margin_right = 138.0
+margin_bottom = 109.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "255.255.255.255"
+
+[node name="PortLabel" type="Label" parent="ConnectHall"]
+margin_left = 149.0
+margin_top = 66.0
+margin_right = 191.0
+margin_bottom = 80.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Port:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Port" type="LineEdit" parent="ConnectHall"]
+margin_left = 148.0
+margin_top = 85.0
+margin_right = 206.0
+margin_bottom = 109.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "65535"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostRoom" type="Button" parent="ConnectHall"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -84.0
+margin_top = 31.0
+margin_right = -19.0
+margin_bottom = 51.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinRoom" type="Button" parent="ConnectHall"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -84.0
+margin_top = 87.0
+margin_right = -19.0
+margin_bottom = 107.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorLabel" type="RichTextLabel" parent="ConnectHall"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 125.0
+margin_right = -20.0
+margin_bottom = 157.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+bbcode_enabled = true
+
+[node name="ReadyRoom" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -407.5
+margin_top = -231.5
+margin_right = -0.5
+margin_bottom = 303.5
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camp1" parent="ReadyRoom" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 40.0
+margin_right = -9.99997
+margin_bottom = 240.0
+
+[node name="Camp2" parent="ReadyRoom" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 274.0
+margin_right = -9.99997
+margin_bottom = 474.0
+
+[node name="Start" type="Button" parent="ReadyRoom"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -140.0
+margin_top = -48.0
+margin_right = -15.0
+margin_bottom = -19.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Start Game"
+
+[node name="Leave" type="Button" parent="ReadyRoom"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = -48.0
+margin_right = 140.0
+margin_bottom = -19.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Leave"
+
+[node name="PopupMenu" type="PopupMenu" parent="ReadyRoom"]
+self_modulate = Color( 0.862745, 1, 0.713726, 1 )
+margin_left = 16.0
+margin_top = 43.0
+margin_right = 365.0
+margin_bottom = 109.0
+custom_constants/vseparation = 10
+
+[node name="Chat" type="Panel" parent="ReadyRoom"]
+self_modulate = Color( 0, 0.552941, 1, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 407.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input" type="LineEdit" parent="ReadyRoom/Chat"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -35.0
+margin_right = -60.0
+margin_bottom = -5.0
+text = "input content"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Send" type="Button" parent="ReadyRoom/Chat"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -55.0
+margin_top = -35.0
+margin_right = -5.0
+margin_bottom = -5.0
+text = "Send"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="TextEdit" parent="ReadyRoom/Chat"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -40.0
+custom_constants/line_spacing = 5
+text = "player1:hello
+player2:world"
+readonly = true
+syntax_highlighting = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Panel" parent="ReadyRoom"]
+self_modulate = Color( 0.529412, 0.792157, 1, 1 )
+anchor_right = 2.0
+margin_top = -80.0
+margin_bottom = -5.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ReadyRoom/About"]
+margin_left = 15.0
+margin_top = 4.0
+margin_right = 107.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 3 )
+text = "Game Name:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescLabel" type="Label" parent="ReadyRoom/About"]
+margin_left = 15.0
+margin_top = 29.0
+margin_right = 123.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 3 )
+text = "Introduction:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="ReadyRoom/About"]
+margin_left = 125.0
+margin_top = 7.0
+margin_right = 217.0
+margin_bottom = 30.0
+text = "war"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Desc" type="Label" parent="ReadyRoom/About"]
+margin_left = 131.0
+margin_top = 35.0
+margin_right = 303.0
+margin_bottom = 58.0
+custom_constants/line_spacing = 3
+text = "none"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ConnectHall/HostRoom" to="." method="_on_Host_pressed"]
+[connection signal="pressed" from="ConnectHall/JoinRoom" to="." method="_on_Join_pressed"]
+[connection signal="pressed" from="ReadyRoom/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="ReadyRoom/Leave" to="." method="_on_Leave_pressed"]
+[connection signal="text_entered" from="ReadyRoom/Chat/Input" to="." method="_on_Input_text_entered"]
+[connection signal="pressed" from="ReadyRoom/Chat/Send" to="." method="_on_Send_pressed"]
